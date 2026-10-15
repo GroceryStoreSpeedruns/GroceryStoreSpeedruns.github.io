@@ -12,11 +12,11 @@ body {
   display: none;
 }
 
-#table-toggle:checked ~ .table {
+#table-toggle:checked ~ .B&M {
   display: none;
 }
 
-#table-toggle:checked ~ .iceland {
+#table-toggle:checked ~ .Iceland {
   display: table;
 }
 
