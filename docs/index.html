@@ -9,17 +9,76 @@
   <body>
     <div class="leaderboard">
     <table style="border-collapse: collapse">
-      <tr>
-        <th class="leaderboard-heading">Placement</th>
-        <th class="leaderboard-heading">Speedrun Time</th>
-        <th class="leaderboard-heading">Date (DD/MM/YYYY)</th>
+      <thead>
+        <tr>
+          <th class="leaderboard-heading">Placement</th>
+          <th class="leaderboard-heading">Speedrun Time</th>
+          <th class="leaderboard-heading">Date (DD/MM/YYYY)</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboardBody">
+        <tr>
+          <td class="placement">1st</td>
+          <td class="speedrun-time">3:42.53</td>
+          <td class="date">30/2/26</td>
       </tr>
-      <tr>
-        <td class="placement">1st</td>
-        <td class="speedrun-time">3:42.53</td>
-        <td class="date">30/2/26</td>
-      </tr>
+      </tbody>
     </table>
     </div>
+
+  
+    <script>
+    // this part is vibe coded until i go learn js
+      
+    function getOrdinalSuffix(num) {
+        const j = num % 10;
+        const k = num % 100;
+        if (j === 1 && k !== 11) return num + "st";
+        if (j === 2 && k !== 12) return num + "nd";
+        if (j === 3 && k !== 13) return num + "rd";
+        return num + "th";
+    }
+
+    async function loadLeaderboard() {
+        const tableBody = document.getElementById('leaderboardBody');
+        
+        try {
+            const response = await fetch('./leaderboard.json?t=' + Date.now());
+            if (!response.ok) throw new Error('Data fetch failed');
+            
+            const data = await response.json();
+
+            
+            data.sort((a, b) => a.timeInSeconds - b.timeInSeconds);
+
+            tableBody.innerHTML = '';
+            
+            data.forEach((item, index) => {
+                const row = document.createElement('tr');
+                
+               
+                const placementText = getOrdinalSuffix(index + 1); 
+
+                row.innerHTML = `
+                    <td class="placement">${placementText}</td>
+                    <td class="speedrun-time">${item.displayTime}</td>
+                    <td class="date">${item.date}</td>
+                `;
+                
+                tableBody.appendChild(row);
+            });
+
+        } catch (error) {
+            console.error('Error loading leaderboard:', error);
+            tableBody.innerHTML = `<tr><td colspan="3" style="text-align:center; color:red;">Failed to load records.</td></tr>`;
+        }
+    }
+
+    loadLeaderboard();
+</script>
+
+    
+
+    
   </body>
 </html>
