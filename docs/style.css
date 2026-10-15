@@ -16,3 +16,7 @@ body {
   overflow: hidden;
 }
   
+.leaderboard-heading {
+  font-weight: bold;
+  font-family: "Trebuchet MS";
+}
