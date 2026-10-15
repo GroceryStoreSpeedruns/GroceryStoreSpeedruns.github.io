@@ -8,6 +8,19 @@ body {
   align-items: center;
 }
 
+.iceland {
+  display: none;
+}
+
+#table-toggle:checked ~ .table {
+  display: none;
+}
+
+#table-toggle:checked ~ .iceland {
+  display: table;
+}
+
+
 .leaderboard {
   height: auto;
   width: fit-content;
