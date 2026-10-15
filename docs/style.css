@@ -12,7 +12,7 @@ body {
   display: none;
 }
 
-#table-toggle:checked ~ .B&M {
+#table-toggle:checked ~ .B_M {
   display: none;
 }
 
