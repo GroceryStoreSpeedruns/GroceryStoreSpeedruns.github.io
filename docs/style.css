@@ -8,5 +8,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  border: 3px;
+  border-radius: 5px;
+  overflow: hidden;
 }
   
