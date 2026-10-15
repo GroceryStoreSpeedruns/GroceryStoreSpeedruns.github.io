@@ -3,7 +3,7 @@ body {
 }
 
 .leaderboard {
-  height: 100vh;
+  height: auto;
   width: fit-content;
   margin: auto;
   display: flex;
