@@ -10,6 +10,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
+  border: 3px solid;
+  border-color: black;
+  border-radius: 5px;
+  overflow: hidden;
 }
   
 .leaderboard-heading {
