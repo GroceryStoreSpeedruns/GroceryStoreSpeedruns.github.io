@@ -27,6 +27,8 @@ body:has(#table-toggle:checked) .leaderboard .Iceland {
 }
 
 .leaderboard {
+  position: relative;
+  top: 3vh;
   height: auto;
   width: fit-content;
   margin: auto;
