@@ -49,8 +49,11 @@ body:has(#table-toggle:checked) .leaderboard .Iceland {
 }
 
 .slider {
+  position: absolute;
+  width: 50%;
+  height: 100%;
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
+  border-radius: 15px;
   transition: 0.5s;
   z-index: 10;
 }
