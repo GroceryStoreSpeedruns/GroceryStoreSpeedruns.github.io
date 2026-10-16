@@ -53,6 +53,7 @@ body:has(#table-toggle:checked) .leaderboard .Iceland {
 }
 
 .placement {
+  font-size: 150%;
   text-align: center;
   border: 3px solid;
   border-color: black;
