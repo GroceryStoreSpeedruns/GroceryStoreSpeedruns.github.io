@@ -57,6 +57,13 @@ body:has(#table-toggle:checked) .leaderboard .Iceland {
   transform: translateX(100%);
 }
 
+.switch-label {
+  position: relative;
+  width: 50%;
+  text-align: center;
+}
+    
+
 .leaderboard {
   position: relative;
   top: 3vh;
