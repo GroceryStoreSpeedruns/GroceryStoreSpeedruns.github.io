@@ -13,11 +13,11 @@ body {
   display: none;
 }
 
-#table-toggle:checked ~ .leaderboard .B_M {
+body:has(#table-toggle:checked) .leaderboard .B_M {
   display: none !important;
 }
 
-#table-toggle:checked ~ .leaderboard .Iceland {
+body:has(#table-toggle:checked) .leaderboard .Iceland {
   display: table !important;
 }
 
