@@ -21,6 +21,10 @@ body {
   display: table !important;
 }
 
+.table-switcher {
+  display: flex;
+  justify-content: center;
+}
 
 .leaderboard {
   height: auto;
