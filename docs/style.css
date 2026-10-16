@@ -14,11 +14,11 @@ body {
 }
 
 #table-toggle:checked ~ .B_M {
-  display: none;
+  display: none !important;
 }
 
 #table-toggle:checked ~ .Iceland {
-  display: table;
+  display: table !important;
 }
 
 
