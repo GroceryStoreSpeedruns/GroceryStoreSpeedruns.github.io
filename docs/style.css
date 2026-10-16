@@ -37,6 +37,7 @@ body:has(#table-toggle:checked) .leaderboard .Iceland {
   position: relative;
   display: flex;
   align-items: center;
+  z-index: 0;
   
   cursor: pointer;
   width: 100%;
@@ -51,6 +52,7 @@ body:has(#table-toggle:checked) .leaderboard .Iceland {
   background-color: rgba(0, 0, 0, 1);
   border-radius: 10px;
   transition: 0.5s;
+  z-index: 10;
 }
 
 .switch input:checked ~ .slider {
@@ -61,6 +63,7 @@ body:has(#table-toggle:checked) .leaderboard .Iceland {
   position: relative;
   width: 50%;
   text-align: center;
+  z-index: 100;
 }
     
 
