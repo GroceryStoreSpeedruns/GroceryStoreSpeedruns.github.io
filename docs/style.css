@@ -23,7 +23,14 @@ body:has(#table-toggle:checked) .leaderboard .Iceland {
 
 .table-switcher {
   display: flex;
+  position: relative;
   justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 5vh;
+  width: 40%;
+  background: linear-gradient(to bottom right(rgba(245, 17, 17, 1), rgba(207, 131, 105, 1), rgba(237, 221, 83, 1));
+  border-radius: 15px;
 }
 
 .leaderboard {
