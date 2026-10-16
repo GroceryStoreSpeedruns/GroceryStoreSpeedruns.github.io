@@ -45,6 +45,7 @@ body:has(#table-toggle:checked) .leaderboard .Iceland {
 }
 
 .switch input {
+  position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
